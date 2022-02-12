@@ -1,0 +1,48 @@
+.MovieCreate {
+    /* background-color: rgb(67, 138, 185); */
+    text-align: left;
+    width: 90%;
+}
+.MovieForm {
+    opacity: 0;
+    animation: fadeIn 2s cubic-bezier(0.94,-0.15, 0.93, 0.97) forwards;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    text-align: right;
+}
+.inputForm{
+    margin:2% 0;
+    font-size: x-large;
+    background-color: rgba(240, 248, 255, 0);
+    padding: 10px;
+    border: none;
+}
+
+.inputForm:hover{
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+::placeholder { 
+    color: black;
+    opacity: 1; 
+}
+
+.buttonForm {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+    align-self: center;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 100%;
+    }
+}
+.formElement{
+    margin: 5px 10px;
+    padding: 0;
+}

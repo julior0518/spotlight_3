@@ -1,0 +1,9 @@
+
+.MoviesCard {
+    background-color: rgb(67, 138, 185);
+    text-align: left;
+    grid-column: 1 /  span 2;
+    grid-row: 1;
+    border-radius: 25px;
+
+}

@@ -1,0 +1,8 @@
+.Nav {
+    background-color: beige;
+    grid-column: 1;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px 10px;
+    margin: 20px;
+}

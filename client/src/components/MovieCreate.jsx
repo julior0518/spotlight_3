@@ -1,0 +1,64 @@
+import { useState } from 'react';
+import '../style/movieCreate.css'
+import axios from 'axios';
+import { BASE_URL } from '../globals'
+
+function MovieCreate() {
+    const [form, setForm]=useState({
+        name: '',
+        // image: '',
+        description:'',
+        budget:''
+    })
+
+    function handleChange(e){
+        setForm({ ...form, [e.target.id]: e.target.value })
+    }
+    console.log(form)
+    async function handleSubmit(e){
+        e.preventDefault()        
+            axios.post(`${BASE_URL}/movies`,form);
+        }
+
+    return (
+        <div className="MovieCreate">
+            <form className="MovieForm">
+                <div className='formElement'>// back to movies</div>
+                <h1 className='formElement'>add movie</h1>
+                <p className='formElement'></p>
+                <input 
+                    onChange={handleChange}  
+                    placeholder="Title" 
+                    id="name" 
+                    type="text" 
+                    className='inputForm'
+                ></input>
+                <input 
+                    onChange={handleChange}  
+                    placeholder="Description" 
+                    id="description" 
+                    type="text" 
+                    className='inputForm'
+                ></input>
+                <input 
+                    onChange={handleChange}  
+                    placeholder="Budget" 
+                    id="budget" 
+                    type="text" 
+                    className='inputForm'
+                ></input>
+                    {/* <input 
+                    onChange={handleChange}  
+                    placeholder="Image" 
+                    id="image" 
+                    type="image" 
+                    className='inputForm'
+                ></input> */}
+	            {/* <input type="file" id="image" accept="image/*"></input> */}
+                <button className='buttonForm' onClick={handleSubmit}>Submit</button>
+            </form>
+        </div>
+    );
+    }
+    
+    export default MovieCreate;
