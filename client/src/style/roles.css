@@ -5,3 +5,22 @@
     height: 60vh;
 
 }
+#addRole{
+    background-color: antiquewhite;
+    width:fit-content;
+    width: 100%;
+
+}
+#addRole:hover {
+    cursor: pointer;
+    
+}
+
+.animateAddRole{
+    animation: growCenter 2s ease-in forwards;
+
+}
+
+@keyframes growCenter {
+  100% {background-color: red}
+}

@@ -10,4 +10,7 @@ router.get('/movies/:id', controllers.getMoviesById);
 router.put('/movies/:id', controllers.updateMovie);
 router.delete('/movies/:id', controllers.deleteMovie);
 
+router.post('/roles', controllers.createRole);
+router.get('/roles', controllers.getAllRoles);
+
 module.exports = router

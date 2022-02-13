@@ -19,16 +19,16 @@ function MoviesCard({movies}) {
     function showRoles(){
         setShow(!show)
     }
-
+    let movie = movies.todosLosMovies[current]
     return (
         <div className="MoviesCard">
-            <img className="MoviesCardImage" src={movies.todosLosMovies[current].image}/>
+            <img className="MoviesCardImage" src={movie.image}/>
             <div className='gradient'></div>
             <div className="previous" onClick={previous}></div>
             <div className={show ? "MoviesCardInfoOpen" : "MoviesCardInfo"} >
-                <h1 id="indent" className='MoviesCardTitle'>{movies.todosLosMovies[current].name}</h1>
-                <p id="indent">{movies.todosLosMovies[current].description}</p>
-                {show ? <Role /> : null}
+                <h1 id="indent" className='MoviesCardTitle'>{movie.name}</h1>
+                <p id="indent">{movie.description}</p>
+                {show ? <Role movie={movie} /> : null}
             </div>
             <div className="next" onClick={next}></div>
 

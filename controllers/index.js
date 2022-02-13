@@ -1,4 +1,4 @@
-const { Movie, } = require('../models');
+const { Movie, Role } = require('../models');
 
 
 
@@ -16,6 +16,7 @@ const createMovie = async (req, res) => {
         return res.status(500).json({ error: error.message });
         }
     };
+
 const createRole = async (req, res) => {
     try {
         const esteRole = await new Role(req.body);
@@ -34,6 +35,15 @@ const getAllMovies = async (req, res) => {
     try {
         const todosLosMovies = await Movie.find();
         return res.status(200).json({ todosLosMovies });
+        } catch (error) {
+        return res.status(500).send(error.message);
+        }
+    }; 
+
+const getAllRoles = async (req, res) => {
+    try {
+        const todosLosRoles = await Role.find();
+        return res.status(200).json({ todosLosRoles });
         } catch (error) {
         return res.status(500).send(error.message);
         }
@@ -92,6 +102,8 @@ module.exports = {
     getAllMovies,
     getMoviesById,
     updateMovie,
-    deleteMovie
+    deleteMovie,
+    createRole,
+    getAllRoles
 
 } 
