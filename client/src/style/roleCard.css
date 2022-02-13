@@ -1,9 +1,41 @@
 .RoleCard{
     height: 50%;
-    width: 95%;
-    background-color: blueviolet;
-    margin-left: 40px;
+    width: 90%;
 
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-template-columns: 50% 50%;
 } 
+.cardsLeft {
+    grid-column: 1;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left: 40px;
+}
+
+
+.cardOuter {
+background-color: rgba(105, 105, 105, 0.493);
+border-radius: 25px 0 0 25px;
+padding: 1px;
+}
+
+.card {
+    border-bottom: 2px solid white;
+    width:80%;
+    margin: 10px 0 10px 40px;
+}
+.card:hover{
+    cursor: pointer;
+}
+
+
+ul
+
+
+.cardsRight{
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+}

@@ -9,8 +9,11 @@
 margin-left: 40px;
 }
 #addRole{
+padding: 5px;
+
 padding-top: 100px;
 margin-left: 40px;
+width: fit-content;
 }
 
 #addRole:hover {
