@@ -3,7 +3,7 @@ import '../style/roleCreate.css'
 import axios from 'axios';
 import { BASE_URL } from '../globals'
 
-function RoleCreate({movie}) {
+function RoleCreate({movie , role}) {
     const [form, setForm]=useState({
         movie: movie._id,
         name: '',
@@ -12,7 +12,7 @@ function RoleCreate({movie}) {
         ethnicity: '',
         category: ''
     })
-
+console.log(movie)
     function handleChange(e){
         e.preventDefault()        
         setForm({ ...form, [e.target.id]: e.target.value })

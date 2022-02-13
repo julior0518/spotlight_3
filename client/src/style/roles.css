@@ -2,7 +2,7 @@
     color: white;
     grid-column: 1 /  span 3;
     grid-row: 1 /  span 3;
-    background-color: bisque;
+    background-color: rgb(56, 56, 56);
     border-radius: 25px;
 }
 #addRole{
