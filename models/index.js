@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const TacoSchema = require('./Taco');
+const MovieSchema = require('./Movie');
 
-const Taco = mongoose.model('tacos', TacoSchema);
+const Movie = mongoose.model('movies', MovieSchema);
 
 module.exports = {
-    Taco
+    Movie
 };

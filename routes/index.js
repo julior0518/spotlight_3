@@ -4,10 +4,10 @@ const controllers = require('../controllers');
 
 router.get('/', (req, res) => res.send('This is groot!'));
 
-router.post('/tacos', controllers.createTaco);
-router.get('/tacos', controllers.getAllTacos);
-router.get('/tacos/:id', controllers.getTacosById);
-router.put('/tacos/:id', controllers.updateTaco);
-router.delete('/tacos/:id', controllers.deleteTaco);
+router.post('/movies', controllers.createMovie);
+router.get('/movies', controllers.getAllMovies);
+router.get('/movies/:id', controllers.getMoviesById);
+router.put('/movies/:id', controllers.updateMovie);
+router.delete('/movies/:id', controllers.deleteMovie);
 
 module.exports = router

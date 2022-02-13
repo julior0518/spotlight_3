@@ -6,11 +6,11 @@ import '../style/movieCard.css'
 function MoviesCard({movies}) {
 
 
-
+    console.log(movies.todosLosMovies)
     return (
         <div className="MoviesCard">
             <p>MoviesCard</p>
-            <h1>{movies[0].name}</h1>
+            <img className="MoviesCard" src={movies.todosLosMovies[0].image}/>
             
         </div>
     );

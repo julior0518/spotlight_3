@@ -2,11 +2,12 @@ import { useState } from 'react';
 import '../style/movieCreate.css'
 import axios from 'axios';
 import { BASE_URL } from '../globals'
+import FileBase64 from 'react-file-base64'
 
 function MovieCreate() {
     const [form, setForm]=useState({
         name: '',
-        // image: '',
+        image: '',
         description:'',
         budget:''
     })
@@ -16,7 +17,7 @@ function MovieCreate() {
     }
     console.log(form)
     async function handleSubmit(e){
-        e.preventDefault()        
+        // e.preventDefault()        
             axios.post(`${BASE_URL}/movies`,form);
         }
 
@@ -55,6 +56,7 @@ function MovieCreate() {
                     className='inputForm'
                 ></input> */}
 	            {/* <input type="file" id="image" accept="image/*"></input> */}
+                <FileBase64 multiple={false} onDone={({base64}) => setForm({...form, image: base64 })}/>
                 <button className='buttonForm' onClick={handleSubmit}>Submit</button>
             </form>
         </div>

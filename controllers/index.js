@@ -1,16 +1,17 @@
-const { Taco, } = require('../models');
+const { Movie, } = require('../models');
 
 
 
 
 /////////////// CREATE
 
-const createTaco = async (req, res) => {
+const createMovie = async (req, res) => {
     try {
-        const esteTaco = await new Taco(req.body);
-        await esteTaco.save();
+        console.log(req)
+        const esteMovie = await new Movie(req.body);
+        await esteMovie.save();
         return res.status(201).json({
-            esteTaco,
+            esteMovie,
         });
         } catch (error) {
         return res.status(500).json({ error: error.message });
@@ -19,21 +20,21 @@ const createTaco = async (req, res) => {
 
 //////////////// READ
 
-const getAllTacos = async (req, res) => {
+const getAllMovies = async (req, res) => {
     try {
-        const todosLosTacos = await Taco.find();
-        return res.status(200).json({ todosLosTacos });
+        const todosLosMovies = await Movie.find();
+        return res.status(200).json({ todosLosMovies });
         } catch (error) {
         return res.status(500).send(error.message);
         }
     }; 
 
-const getTacosById = async (req, res) => {
+const getMoviesById = async (req, res) => {
     try {
         const { id } = req.params;
-        const esteTacoId = await Taco.findById(id);
-        if (esteTacoId) {
-        return res.status(200).json({ esteTacoId });
+        const esteMovieId = await Movie.findById(id);
+        if (esteMovieId) {
+        return res.status(200).json({ esteMovieId });
         }
         return res.status(404).send('This ID is not real');
     } catch (error) {
@@ -43,10 +44,10 @@ const getTacosById = async (req, res) => {
 
 /////////////// UPDATE
 
-const updateTaco = async (req, res) => {
+const updateMovie = async (req, res) => {
     try {
     const { id } = req.params;
-    Taco.findByIdAndUpdate(id, req.body, { new: true }, (err, user) => {
+    Movie.findByIdAndUpdate(id, req.body, { new: true }, (err, user) => {
         if (err) {
         res.status(500).send(err);
         }
@@ -62,10 +63,10 @@ const updateTaco = async (req, res) => {
 
 //////////////// DELETE
 
-const deleteTaco = async (req, res) => {
+const deleteMovie = async (req, res) => {
     try {
     const { id } = req.params;
-    const deleted = await Taco.findByIdAndDelete(id);
+    const deleted = await Movie.findByIdAndDelete(id);
     if (deleted) {
         return res.status(200).send('deleted');
     }
@@ -77,10 +78,10 @@ const deleteTaco = async (req, res) => {
 
 
 module.exports = {
-    createTaco,
-    getTacosById,
-    getAllTacos,
-    updateTaco,
-    deleteTaco,
+    createMovie,
+    getAllMovies,
+    getMoviesById,
+    updateMovie,
+    deleteMovie
 
 } 

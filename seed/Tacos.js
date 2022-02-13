@@ -1,26 +1,23 @@
 const db = require('../db');
-const {Taco} = require('../models/index');
+const {Movie} = require('../models/index');
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));db
 
 const mainSeed = async () => {
-    const tacos = [
+    const movies = [
         {
         name: 'tacoSeed1',
         description: 'the fuego 1',
+        budget: 234,
         image:
             'https://3docean.img.customer.envatousercontent.com/files/252369519/taco_pv.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=d2f1767e3cd0f28c1a3c4dd8d70a8edf'
         },
-        {
-        name: 'tacoSeed2 ',
-        description: 'this is cat taco',
-        image: 'https://wallpapercave.com/wp/wp5048642.jpg'
-        }
+    
     ];
 
-    await Taco.insertMany(tacos);
-    console.log('Created some banging tacos!');
+    await Movie.insertMany(movies);
+    console.log('Created some good Movies!');
     };
     const run = async () => {
     await mainSeed();
