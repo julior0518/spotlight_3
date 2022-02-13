@@ -12,5 +12,6 @@ router.delete('/movies/:id', controllers.deleteMovie);
 
 router.post('/roles', controllers.createRole);
 router.get('/roles', controllers.getAllRoles);
+router.get('/roles/:id', controllers.getRoleByMoviesId);
 
 module.exports = router
