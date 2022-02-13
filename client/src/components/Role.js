@@ -21,9 +21,9 @@ function Roles({movie,current}) {
         <div className= "Roles">
             
             
-            {show ? null : <h2 onClick={()=>{setShow(!show)}} id="addRole" >{show ? "// show roles" : "+ add a role"}
+            {show ? null : <h2 onClick={()=>{setShow(!show)}}  id="addRole" >{show ? "// show roles" : "+ add a role"}
             </h2>}
-            {show ? <RoleCreate  movie={movie}/> : null}
+            {show ? <RoleCreate show={show} setShow={setShow} movie={movie}/> : null}
             {show 
                 ? null
                 : roles 

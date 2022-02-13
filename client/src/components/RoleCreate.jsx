@@ -3,7 +3,7 @@ import '../style/roleCreate.css'
 import axios from 'axios';
 import { BASE_URL } from '../globals'
 
-function RoleCreate({movie , role}) {
+function RoleCreate({movie , show, setShow}) {
     const [form, setForm]=useState({
         movie: movie._id,
         name: '',
@@ -22,12 +22,14 @@ console.log(movie)
             axios.post(`${BASE_URL}/roles`, form);
         }
     
+        
 console.log(form)
     return (
         <div className="rolesForm">
             
             <form className="RoleForms">
                 <h2 id="first">Role for {movie.name}</h2>
+
                 <input 
                     onChange={handleChange}  
                     placeholder="Characte Name" 
@@ -66,6 +68,8 @@ console.log(form)
                 ></input>
             
                 <button className='buttonFormR' onClick={handleSubmit}>Submit</button>
+                <p className='buttonCancel' onClick={() => {setShow(!show)}}>Cancel</p>
+
             </form>
         </div>
     );

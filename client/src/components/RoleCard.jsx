@@ -4,12 +4,12 @@ import axios from 'axios';
 import '../style/roleCard.css'
 
 function RoleCard({roles, current}) {
-    console.log(current)
-    // console.log(roles.esteRoleMoviesId[current].name)
+    let empty = roles.esteRoleMoviesId.length === 0
     return (
         <div className= "RoleCard">
                 <div className='card'>
-                    {/* <p>{ roles.esteRoleMoviesId[0].name}</p> */}
+                    {/* {empty ?  <p>{ roles.esteRoleMoviesId[0].name}</p> : null} */}
+                    {empty ?  null : <p>{ roles.esteRoleMoviesId[0].name}</p>}
                     hello
                 </div>
         </div>
