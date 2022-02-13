@@ -5,13 +5,19 @@ import '../style/roleCard.css'
 
 function RoleCard({roles, current}) {
     let empty = roles.esteRoleMoviesId.length === 0
+
+
     return (
         <div className= "RoleCard">
-                <div className='card'>
-                    {/* {empty ?  <p>{ roles.esteRoleMoviesId[0].name}</p> : null} */}
-                    {empty ?  null : <p>{ roles.esteRoleMoviesId[0].name}</p>}
-                    hello
-                </div>
+                {roles.esteRoleMoviesId.map((role, i) => {
+                    return (
+                        <ul>
+                            <div className='card'>
+                                <p>{ roles.esteRoleMoviesId[i].name}</p>
+                            </div>
+                        </ul>
+                    )
+                })}
         </div>
     );
     }

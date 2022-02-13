@@ -2,13 +2,17 @@
     color: white;
     grid-column: 1 /  span 3;
     grid-row: 1 /  span 3;
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(56, 56, 56, 0);
     border-radius: 25px;
 }
-#addRole{
-margin-left: 20px;
-
+#addRoleText{
+margin-left: 40px;
 }
+#addRole{
+padding-top: 100px;
+margin-left: 40px;
+}
+
 #addRole:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.685);
@@ -18,17 +22,16 @@ margin-left: 20px;
 .rolesForm {
     width: 1%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(0, 0, 0, 0.048);
 
     animation: growCenter 1.5s cubic-bezier(0.85, 0, 0.19, 0.92) forwards;
-
 }
 @keyframes growCenter {
     100% {
         width: 100%;
         height: 100%;
-        background-color: red;
-    border-radius: 25px;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.596);
 
     }
 }

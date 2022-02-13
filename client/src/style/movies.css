@@ -8,7 +8,6 @@
     text-align: right;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     animation: fadeIn 1s ease-in forwards;
 
 

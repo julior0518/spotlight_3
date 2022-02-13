@@ -1,6 +1,6 @@
 
 .RoleForms {
-    background-color: rgb(80, 78, 75);
+    background-color: rgba(80, 78, 75, 0);
     opacity: 0;
     margin: 0 20%;
     animation: fadeIn 2s cubic-bezier(0.94,-0.15, 0.93, 0.97) forwards;

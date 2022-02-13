@@ -1,8 +1,9 @@
 .RoleCard{
-    display: flex;
-    position: absolute;
-    height: 40%;
-    width: 70%;
+    height: 50%;
+    width: 95%;
     background-color: blueviolet;
     margin-left: 40px;
+
+    display: grid;
+    grid-column: 1fr 1fr;
 } 

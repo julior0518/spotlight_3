@@ -7,5 +7,5 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 20vw 80vw;
+    grid-template-columns: 15vw 85vw;
 }

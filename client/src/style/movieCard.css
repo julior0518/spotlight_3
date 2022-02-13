@@ -29,7 +29,7 @@
     color: white;
     align-self: flex-end;
     border-radius: 25px;
-    padding-bottom: 30%;
+    padding-bottom: 8%;
     
 
 }
@@ -66,11 +66,11 @@
 
 .next:hover {
 
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(31, 31, 31));
 }
 
 .previous:hover {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(19, 19, 19));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(31, 31, 31));
 
 }
 
