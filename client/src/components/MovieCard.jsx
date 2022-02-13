@@ -31,7 +31,7 @@ function MoviesCard({movies}) {
             </div>
             }
             <div className="next" onClick={next}></div>
-            {show ? <Role movie={movie} /> : null}
+            {show ? <Role movie={movie} current={current} /> : null}
 
             <h3 className='showRoles' onClick={showRoles}> {show ? "show less" : "show roles"} </h3>
             
