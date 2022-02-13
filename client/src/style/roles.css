@@ -1,26 +1,33 @@
 .Roles {
-    background-color: rgb(67, 185, 126);
-    text-align: left;
-    margin-left: 40px;
-    height: 60vh;
-
+    color: white;
+    grid-column: 1 /  span 3;
+    grid-row: 1 /  span 3;
+    background-color: bisque;
+    border-radius: 25px;
 }
 #addRole{
-    background-color: antiquewhite;
-    width:fit-content;
-    width: 100%;
+margin-left: 20px;
 
 }
 #addRole:hover {
     cursor: pointer;
-    
+    color: rgba(255, 255, 255, 0.685);
 }
 
-.animateAddRole{
-    animation: growCenter 2s ease-in forwards;
+
+.rolesForm {
+    width: 1%;
+    height: 1%;
+    background-color: blue;
+    border-radius: 25px;
+
+    animation: growCenter 2s cubic-bezier(0.48, 0, 0, 0.83) forwards;
 
 }
-
 @keyframes growCenter {
-  100% {background-color: red}
+    100% {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+    }
 }

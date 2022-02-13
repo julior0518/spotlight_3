@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../style/movieCreate.css'
+import '../style/roleCreate.css'
 import axios from 'axios';
 import { BASE_URL } from '../globals'
 
@@ -14,43 +14,58 @@ function RoleCreate({movie}) {
     })
 
     function handleChange(e){
+        e.preventDefault()        
         setForm({ ...form, [e.target.id]: e.target.value })
     }
     async function handleSubmit(e){
-        // e.preventDefault()        
-        
-            axios.post(`${BASE_URL}/roles`,form);
+
+            axios.post(`${BASE_URL}/roles`, form);
         }
     
-   
-
+console.log(form)
     return (
-        <div className="MovieCreate">
-            <form className="MovieForm">
-                {movie.name}
+        <div className="rolesForm">
+            
+            <form className="RoleForms">
+                <h2 id="first">Role for {movie.name}</h2>
                 <input 
                     onChange={handleChange}  
-                    placeholder="Title" 
+                    placeholder="Characte Name" 
                     id="name" 
                     type="text" 
-                    className='inputForm'
+                    className='inputFormR'
+                    
                 ></input>
                 <input 
                     onChange={handleChange}  
                     placeholder="Description" 
                     id="description" 
                     type="text" 
-                    className='inputForm'
+                    className='inputFormR'
                 ></input>
                 <input 
                     onChange={handleChange}  
-                    placeholder="Budget" 
-                    id="budget" 
+                    placeholder="age" 
+                    id="age" 
                     type="text" 
-                    className='inputForm'
+                    className='inputFormR'
+                ></input>
+                <input 
+                    onChange={handleChange}  
+                    placeholder="Ethnicity" 
+                    id="ethnicity" 
+                    type="text" 
+                    className='inputFormR'
+                ></input>
+                <input 
+                    onChange={handleChange}  
+                    placeholder="Lead, Secondary, Extra" 
+                    id="category" 
+                    type="text" 
+                    className='inputFormR'
                 ></input>
             
-                <button className='buttonForm' onClick={handleSubmit}>Submit</button>
+                <button className='buttonFormR' onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     );

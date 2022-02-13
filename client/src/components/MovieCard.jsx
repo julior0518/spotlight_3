@@ -25,12 +25,13 @@ function MoviesCard({movies}) {
             <img className="MoviesCardImage" src={movie.image}/>
             <div className='gradient'></div>
             <div className="previous" onClick={previous}></div>
-            <div className={show ? "MoviesCardInfoOpen" : "MoviesCardInfo"} >
+            {show ? null :<div className= "MoviesCardInfo" >
                 <h1 id="indent" className='MoviesCardTitle'>{movie.name}</h1>
                 <p id="indent">{movie.description}</p>
-                {show ? <Role movie={movie} /> : null}
             </div>
+            }
             <div className="next" onClick={next}></div>
+            {show ? <Role movie={movie} /> : null}
 
             <h3 className='showRoles' onClick={showRoles}> {show ? "show less" : "show roles"} </h3>
             

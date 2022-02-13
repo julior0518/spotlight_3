@@ -1,0 +1,40 @@
+
+.RoleForms {
+    background-color: rgb(80, 78, 75);
+    opacity: 0;
+    margin: 0 20%;
+    animation: fadeIn 2s cubic-bezier(0.94,-0.15, 0.93, 0.97) forwards;
+    display: flex;
+    flex-direction: column;
+    
+}
+.inputFormR{
+    margin:2% 0;
+    font-size: x-large;
+    color: rgba(255, 255, 255, 0.514);
+    background-color: rgba(20, 61, 172, 0);
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: solid 1px rgba(255, 255, 255, 0.562);
+    
+}
+#first {
+    margin-top: 15%;
+}
+.buttonFormR {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 50px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 100%;
+    }
+}
+
+
