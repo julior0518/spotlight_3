@@ -23,7 +23,6 @@ function Roles({movie}) {
             </h2>}
 
             {show ? <RoleCreate movie={movie} /> : null}
-   
         </div>
     );
     }
