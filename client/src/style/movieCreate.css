@@ -1,7 +1,8 @@
 .MovieCreate {
     /* background-color: rgb(67, 138, 185); */
     text-align: left;
-    width: 90%;
+    width: 70%;
+    height: 60%;
 }
 .MovieForm {
     opacity: 0;
@@ -33,6 +34,7 @@
     height: 40px;
     border-radius: 5px;
     border: none;
+    margin-top: 100px;
     margin-left: 10px;
     align-self: center;
 }
@@ -45,4 +47,9 @@
 .formElement{
     margin: 5px 10px;
     padding: 0;
+}
+
+#back:hover {
+    margin: 5px 20px;
+    cursor: pointer;
 }

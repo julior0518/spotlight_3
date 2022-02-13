@@ -4,7 +4,7 @@ import axios from 'axios';
 import { BASE_URL } from '../globals'
 import FileBase64 from 'react-file-base64'
 
-function MovieCreate() {
+function MovieCreate({setAnimate, animate}) {
     const [form, setForm]=useState({
         name: '',
         image: '',
@@ -15,16 +15,21 @@ function MovieCreate() {
     function handleChange(e){
         setForm({ ...form, [e.target.id]: e.target.value })
     }
-    console.log(form)
     async function handleSubmit(e){
         // e.preventDefault()        
+        
             axios.post(`${BASE_URL}/movies`,form);
         }
+    
+    function clickme (){
+        document.location.reload()
+        return false
+    }
 
     return (
         <div className="MovieCreate">
             <form className="MovieForm">
-                <div className='formElement'>// back to movies</div>
+                <div className='formElement' id='back' onClick={clickme}>// back to movies</div>
                 <h1 className='formElement'>add movie</h1>
                 <p className='formElement'></p>
                 <input 

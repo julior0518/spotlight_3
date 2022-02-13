@@ -1,9 +1,93 @@
 
 .MoviesCard {
-    background-color: rgb(67, 138, 185);
+    background-color: rgb(67, 185, 126);
     text-align: left;
     grid-column: 1 /  span 2;
     grid-row: 1;
     border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 30% ;
+    grid-template-rows: 1fr 1fr  ;
 
 }
+
+.MoviesCardImage{
+    grid-column: 1 /  span 3;
+    grid-row: 1 /  span 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+
+}
+
+.MoviesCardInfo {
+    grid-column: 1;
+    grid-row: 1/ span 2;
+    color: white;
+    margin: 0 40px;
+    align-self: center;
+}
+.MoviesCardInfoOpen{
+    grid-column: 1;
+    grid-row: 1/ span 2;
+    color: white;
+    margin: 0 40px;
+    align-self: flex-start
+}
+
+    
+
+.MoviesCardTitle {
+    grid-column: 1;
+    grid-row: 2;
+    color: white;
+}
+.gradient{
+    grid-column: 1 /  span 3;
+    grid-row: 1 /  span 3;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
+}
+.previous{
+    border-radius: 25px;
+    grid-column: 1;
+    grid-row: 1/ span 2;
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+}
+.next{
+    border-radius: 25px;
+    grid-column: 3;
+    grid-row: 1/ span 2;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+}
+
+.next:hover {
+
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(19, 19, 19));
+}
+
+.previous:hover {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(19, 19, 19));
+
+}
+
+.showRoles{
+    grid-column: 1/ span 3;
+    grid-row: 2;
+    color: rgba(245, 245, 245, 0.644);
+    text-align: center;
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.showRoles:hover {
+    padding-bottom: 25px;
+    color: white;
+    cursor: pointer;
+}
+
