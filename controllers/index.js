@@ -7,11 +7,21 @@ const { Movie, } = require('../models');
 
 const createMovie = async (req, res) => {
     try {
-        console.log(req)
         const esteMovie = await new Movie(req.body);
         await esteMovie.save();
         return res.status(201).json({
             esteMovie,
+        });
+        } catch (error) {
+        return res.status(500).json({ error: error.message });
+        }
+    };
+const createRole = async (req, res) => {
+    try {
+        const esteRole = await new Role(req.body);
+        await esteRole.save();
+        return res.status(201).json({
+            esteRole,
         });
         } catch (error) {
         return res.status(500).json({ error: error.message });

@@ -12,7 +12,6 @@ function App() {
       < Nav />
       <Switch>
         <Route exact path="/" render={(props)=> <Movies {...props}/>} />
-        <Route exact path="/movies/create" render={(props)=> <MovieCreate {...props}/>} />
       </Switch>
     </div>
   );

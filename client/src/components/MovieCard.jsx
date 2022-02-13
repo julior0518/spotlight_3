@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../style/movieCard.css'
 
-
+import Role from "./Role"
 
 function MoviesCard({movies}) {
     const [current, setCurrent] = useState(0)
@@ -26,13 +26,14 @@ function MoviesCard({movies}) {
             <div className='gradient'></div>
             <div className="previous" onClick={previous}></div>
             <div className={show ? "MoviesCardInfoOpen" : "MoviesCardInfo"} >
-                <h1 className='MoviesCardTitle'>{movies.todosLosMovies[current].name}</h1>
-                <p>{movies.todosLosMovies[current].description}</p>
+                <h1 id="indent" className='MoviesCardTitle'>{movies.todosLosMovies[current].name}</h1>
+                <p id="indent">{movies.todosLosMovies[current].description}</p>
+                {show ? <Role /> : null}
             </div>
             <div className="next" onClick={next}></div>
 
             <h3 className='showRoles' onClick={showRoles}> {show ? "show less" : "show roles"} </h3>
-
+            
         </div>
     );
     }
