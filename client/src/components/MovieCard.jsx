@@ -25,11 +25,12 @@ function MoviesCard({movies}) {
             <img className="MoviesCardImage" src={movie.image}/>
             <div className='gradient'></div>
             <div className="previous" onClick={previous}></div>
-            {show ? null :<div className= "MoviesCardInfo" >
-                <h1 id="indent" className='MoviesCardTitle'>{movie.name}</h1>
-                <p id="indent">{movie.description}</p>
-            </div>
-            }
+                {show ? null :
+                    <div className= "MoviesCardInfo" >
+                        <h1 id="indent" className='MoviesCardTitle'>{movie.name}</h1>
+                        <p id="indent">{movie.description}</p>
+                    </div>
+                }
             <div className="next" onClick={next}></div>
             {show ? <Role movie={movie} current={current} /> : null}
 

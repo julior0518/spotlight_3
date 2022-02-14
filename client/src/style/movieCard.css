@@ -30,17 +30,15 @@
     align-self: flex-end;
     border-radius: 25px;
     padding-bottom: 8%;
-    
-
+    width: 50%;
+    justify-self: center;
 }
 
 .MoviesCardInfoOpen{
     opacity: 0;
 }
 
-#indent {
-    margin-left: 40px;
-}
+
 
 
 .gradient{
