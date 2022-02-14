@@ -15,7 +15,6 @@
     }
 }
 .rolesNav{
-    margin-top: 100px;
     margin-left: 80px;
     display: flex;
     flex-direction: row;
@@ -26,6 +25,20 @@
     margin-left: 20px;
     align-self: center;
     opacity: 60%;
+    margin-top: 100px;
+
+}
+#backRole{
+    text-align: right;
+    opacity: 60%;
+    margin-right: 5%;
+
+}
+#backRole:hover{
+    opacity: 100%;
+}
+#addRoleText{
+    margin-top: 100px;
 
 }
 #addRole:hover {

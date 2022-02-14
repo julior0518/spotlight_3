@@ -8,7 +8,7 @@ import Role from "./Role"
 function MoviesCard({movies}) {
     const [current, setCurrent] = useState(0)
     const [show, setShow] = useState(false)
-   
+    console.log(show)
 
     let arr = movies.todosLosMovies
 
@@ -35,9 +35,9 @@ function MoviesCard({movies}) {
                     </div>
                 }
             <div className="next" onClick={next}></div>
-            {show ? <Role movie={movie} current={current} /> : null}
+            {show ? <Role movie={movie} current={current} shown={show} setShown={setShow}/> : null}
 
-            <h3 className='showRoles' onClick={showRoles}> {show ? "show less" : "show roles"} </h3>
+            <h3 className='showRoles' onClick={showRoles}> {show ? null : "show roles"} </h3>
             
         </div>
     );
