@@ -1,7 +1,6 @@
 
 .Movies {
     opacity: 0;
-    background-color: rgb(196, 255, 199);
     grid-column: 2;
     border-radius: 25px;
     margin: 20px 20px 20px 0;
@@ -16,9 +15,10 @@
     grid-column: 1/ span 2;
     grid-row: 1;
     z-index:1;
-    width: 100px;
-    height: 100px;
-    background-color: aliceblue;
+    /* width: 100px;
+    height: 100px; */
+    width: 10%;
+    height: 15%;
     border-radius: 100px;
     border: none;
     margin: 20px;
@@ -26,10 +26,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: start;
+}
+
+.addButton{
+    width: 80%;
+    opacity: 40%
+
+}
+.addButton:hover {
+    opacity: 100%
 }
 
 #wow {
-    background-color: rgb(255, 208, 0);
+    background-color: rgb(255, 255, 255);
     animation: growIn 1.5s cubic-bezier(0.48,-0.32, 0, 0.83) forwards;
 }
 
@@ -39,11 +49,12 @@
     100% { 
         width: 100%;
         height: 100%;
-        background-color: rgb(175, 67, 185);
+        background-color: rgb(0, 0, 0);
         grid-column: 1 /  span 2;
         grid-row: 1;
         border-radius: 25px;
         margin: 0;
+        color:white
     }
     
 }

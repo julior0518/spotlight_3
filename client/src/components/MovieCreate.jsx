@@ -31,14 +31,22 @@ function MovieCreate({setAnimate, animate}) {
             <form className="MovieForm">
                 <div className='formElement' id='back' onClick={clickme}>// back to movies</div>
                 <h1 className='formElement'>add movie</h1>
-                <p className='formElement'></p>
-                <input 
+                <div className='formRow'>            
+                    <input 
+                        onChange={handleChange}  
+                        placeholder="Title" 
+                        id="name" 
+                        type="text" 
+                        className='inputForm'
+                    ></input>
+                    <input 
                     onChange={handleChange}  
-                    placeholder="Title" 
-                    id="name" 
+                    placeholder="Budget" 
+                    id="budget" 
                     type="text" 
                     className='inputForm'
-                ></input>
+                    ></input>
+                </div>    
                 <input 
                     onChange={handleChange}  
                     placeholder="Description" 
@@ -46,13 +54,7 @@ function MovieCreate({setAnimate, animate}) {
                     type="text" 
                     className='inputForm'
                 ></input>
-                <input 
-                    onChange={handleChange}  
-                    placeholder="Budget" 
-                    id="budget" 
-                    type="text" 
-                    className='inputForm'
-                ></input>
+                
                     {/* <input 
                     onChange={handleChange}  
                     placeholder="Image" 

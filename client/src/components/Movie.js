@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../style/movies.css'
 import MovieCreate from "./MovieCreate";
+import addButton from "../assets/addButton.png"
 
 function Movies(props) {
     const [movies, setMovies] =useState()
@@ -26,11 +27,10 @@ function Movies(props) {
     
     return (
         <div className="Movies">
-        <div onClick={handleClick} className='addMovie'  id={animate ? "wow" : null}>
-            
-            {movieCreate ? <MovieCreate animate={animate} setAnimate={setAnimate}/> : <p>+</p>}
+            <div onClick={handleClick} className='addMovie'  id={animate ? "wow" : null}>
+            {movieCreate ? <MovieCreate animate={animate} setAnimate={setAnimate}/> : <img className="addButton" src={addButton}></img>}
             </div>
-        {movies ? <MoviesCard movies={movies}/> : null}
+            {movies ? <MoviesCard movies={movies}/> : null}
         </div>
     );
     }

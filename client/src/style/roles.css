@@ -4,21 +4,33 @@
     grid-row: 1 /  span 3;
     background-color: rgba(56, 56, 56, 0);
     border-radius: 25px;
+    opacity: 0;
+    animation: slideUp 1.5s cubic-bezier(0.48,-0.32, 0, 0.83) forwards;
+
 }
-#addRoleText{
-margin-left: 80px;
+
+@keyframes slideUp {
+    100%{
+        opacity: 100%;
+    }
 }
+.rolesNav{
+    margin-top: 100px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
 #addRole{
-padding: 5px;
+    margin-left: 20px;
+    align-self: center;
+    opacity: 60%;
 
-padding-top: 100px;
-margin-left: 80px;
-width: fit-content;
 }
-
 #addRole:hover {
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.685);
+    opacity: 100%;
 }
 
 

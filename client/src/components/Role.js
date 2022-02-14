@@ -1,9 +1,9 @@
-import { BASE_URL } from '../globals'
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import '../style/roles.css'
 import RoleCreate from './RoleCreate';
 import RoleCard from './RoleCard'
+import axios from 'axios';
+import { BASE_URL } from '../globals'
 
 function Roles({movie,current}) {
     const [show, setShow] = useState(false)
@@ -16,14 +16,15 @@ function Roles({movie,current}) {
     getMoviesRoles()
     },[movie])
 
- 
     return (
         <div className= "Roles">
             
             
-            {show ? null : <h3 onClick={()=>{setShow(!show)}}  id="addRole" >{show ? "// show roles" : "+ add a role"}
-            </h3>}
-            {show ? null : <h1 id="addRoleText">{movie.name}</h1>}
+            <div className="rolesNav">
+                {show ? null : <h1 id="addRoleText">{movie.name}</h1>}
+                {show ? null : <h3 onClick={()=>{setShow(!show)}}  id="addRole" >{show ? "// show roles" : "+ add a role"}
+                </h3>}
+            </div>
             {show ? <RoleCreate show={show} setShow={setShow} movie={movie}/> : null}
             {show 
                 ? null
