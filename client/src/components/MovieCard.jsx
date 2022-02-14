@@ -8,7 +8,6 @@ import Role from "./Role"
 function MoviesCard({movies}) {
     const [current, setCurrent] = useState(0)
     const [show, setShow] = useState(false)
-    console.log(show)
 
     let arr = movies.todosLosMovies
 

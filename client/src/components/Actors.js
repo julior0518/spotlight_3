@@ -9,23 +9,24 @@ import addButton from '../assets/addButton.png'
 function Actor({movie,role}) {
     const [show, setShow] = useState(false)
     const [actors, setActors] = useState(false)
-    console.log(actors)
     useEffect(()=> {
         async function allActors() {
-            const res = await axios.get(`${BASE_URL}/actors`);
+            const res = await axios.get(`${BASE_URL}/actors/${role._id}`);
             setActors(res.data);
         }
         allActors()
-        },[])
-
+        },[role])
     return (
         <div className= "Actor">
             <div id={show ? "addActorForm" : null} className='addActor' onClick={()=>{setShow(true)}} >
-                {show ? <ActorCreate movieID={movie} roleID={role}/> : <img className="addActorB" src={addButton}></img>}
+                {show ? <ActorCreate movieID={movie} roleID={role}/> : <h3 className="addActorB" src={addButton}>apply</h3>}
             </div>
             <div className='actorCard'>
-
+                
+                {show ? null : actors ? <ActorCard actors={actors}/> : null}
             </div>
+
+            
         </div>
     );
     }

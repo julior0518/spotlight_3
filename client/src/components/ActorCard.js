@@ -4,10 +4,16 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../style/actorCard.css'
 
-function ActorCard({}) {
+function ActorCard({actors}) {
+
+    console.log(actors.este)
     return (
         <div className= "ActorCard">
-            hello
+            {actors.este.length > 0  ?
+            <div>
+                <img className="actorImage" src={actors.este[0].image}></img>
+                <h1>{actors.este[0].name}</h1>
+            </div>: null}
         </div>
     );
     }

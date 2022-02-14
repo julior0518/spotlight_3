@@ -15,7 +15,6 @@ function Roles({movie,current,shown,setShown}) {
     }
     getMoviesRoles()
     },[movie])
-    console.log(roles)
     return (
         <div className= "Roles">
             
