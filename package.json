@@ -13,7 +13,7 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start-server": "node server.js",
+    "start-server": "node client/server.js",
     "dev": "nodemon server.js",
     "build": "cd client && rm -rf build && npm install && npm run build"
   }
