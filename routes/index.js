@@ -15,6 +15,7 @@ router.get('/roles', controllers.getAllRoles);
 router.get('/roles/:id', controllers.getRoleByMoviesId);
 
 router.post('/actors', controllers.createActor);
+router.get('/actors', controllers.getAllActors);
 router.get('/actors/:id', controllers.getActorsByRolesId);
 
 

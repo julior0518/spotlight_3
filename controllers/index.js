@@ -60,7 +60,14 @@ const getAllRoles = async (req, res) => {
         return res.status(500).send(error.message);
         }
     }; 
-
+const getAllActors= async (req, res) => {
+    try {
+        const todos = await Actor.find();
+        return res.status(200).json({ todos });
+        } catch (error) {
+        return res.status(500).send(error.message);
+        }
+    }; 
 
 
 const getMoviesById = async (req, res) => {
@@ -147,6 +154,7 @@ module.exports = {
     getAllRoles,
     getRoleByMoviesId,
     createActor,
+    getAllActors,
     getActorsByRolesId
 
 } 
