@@ -12,5 +12,6 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 15vw 85vw;
-}
+    grid-template-columns: 0vw 85vw;
+    justify-content: center
+;}
