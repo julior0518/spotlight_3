@@ -31,7 +31,7 @@ function Roles({movie,current,shown,setShown}) {
             {show 
                 ? null
                 : roles 
-                    ? <RoleCard roles={roles} current={current}/>  : null
+                    ? <RoleCard roles={roles} currentMovie={current}/>  : null
             }
             <h3 id='backRole' onClick={()=>{setShown(!shown)}}>show less</h3>
 

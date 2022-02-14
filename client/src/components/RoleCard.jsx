@@ -4,10 +4,11 @@ import axios from 'axios';
 import '../style/roleCard.css'
 import Actor from './Actors';
 
-function RoleCard({roles, current}) {
+function RoleCard({roles, currentMovie}) {
     let empty = roles.esteRoleMoviesId.length === 0
     const [select, setSelect ] = useState(0)
-    console.log(select === 0)
+    let roleSelected = roles.esteRoleMoviesId[select]
+
     return (
         <div className= "RoleCard">
             <div className='cardsLeft'>
@@ -24,7 +25,7 @@ function RoleCard({roles, current}) {
                 })}
             </div>
             <div className="cardsRight">
-                <Actor />
+                <Actor movie={currentMovie} role={roleSelected}/>
             </div>
         </div>
     );
