@@ -2,6 +2,7 @@ import { BASE_URL } from '../globals'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../style/roleCard.css'
+import Actor from './Actors';
 
 function RoleCard({roles, current}) {
     let empty = roles.esteRoleMoviesId.length === 0
@@ -12,7 +13,7 @@ function RoleCard({roles, current}) {
             <div className='cardsLeft'>
                 {roles.esteRoleMoviesId.map((role, i) => {
                     return (
-                            <div className= {select === i ? "cardOuter": null}>
+                            <div className= {select === i ? "cardOuter": "cardOuterUnselected"}>
                                 <div className='card's onClick={()=>{setSelect(i)}}>
                                     <h4>{ role.name} - { role.age} -{ role.ethnicity}</h4>
                                     <p>{ role.description}</p>
@@ -23,7 +24,7 @@ function RoleCard({roles, current}) {
                 })}
             </div>
             <div className="cardsRight">
-                asdf
+                <Actor />
             </div>
         </div>
     );

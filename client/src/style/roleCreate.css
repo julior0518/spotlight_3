@@ -6,7 +6,13 @@
     animation: fadeIn 2s cubic-bezier(0.94,-0.15, 0.93, 0.97) forwards;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     
+}
+.formRow {
+    display: flex;
+    justify-content: space-between;
+
 }
 .inputFormR{
     margin:2% 0;

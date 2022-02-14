@@ -29,15 +29,15 @@ console.log(form)
             
             <form className="RoleForms">
                 <h2 id="first">Role for {movie.name}</h2>
-
                 <input 
-                    onChange={handleChange}  
-                    placeholder="Characte Name" 
-                    id="name" 
-                    type="text" 
-                    className='inputFormR'
-                    
-                ></input>
+                        onChange={handleChange}  
+                        placeholder="Characte Name" 
+                        id="name" 
+                        type="text" 
+                        className='inputFormR'
+                        
+                    ></input>
+               
                 <input 
                     onChange={handleChange}  
                     placeholder="Description" 
@@ -45,20 +45,23 @@ console.log(form)
                     type="text" 
                     className='inputFormR'
                 ></input>
-                <input 
-                    onChange={handleChange}  
-                    placeholder="age" 
-                    id="age" 
-                    type="text" 
-                    className='inputFormR'
-                ></input>
-                <input 
+                 <div className="formRow">
+                    <input 
+                        onChange={handleChange}  
+                        placeholder="age" 
+                        id="age" 
+                        type="text" 
+                        className='inputFormR'
+                    ></input>
+                    <input 
                     onChange={handleChange}  
                     placeholder="Ethnicity" 
                     id="ethnicity" 
                     type="text" 
                     className='inputFormR'
                 ></input>
+                </div>
+                
                 <input 
                     onChange={handleChange}  
                     placeholder="Lead, Secondary, Extra" 
