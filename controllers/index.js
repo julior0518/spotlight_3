@@ -1,4 +1,4 @@
-const { Movie, Role } = require('../models');
+const { Movie, Role, Actor } = require('../models');
 
 
 
@@ -29,6 +29,18 @@ const createRole = async (req, res) => {
         }
     };
 
+    const createActor = async (req, res) => {
+        try {
+            const este = await new Actor(req.body);
+            await este.save();
+            return res.status(201).json({
+                este,
+            });
+            } catch (error) {
+            return res.status(500).json({ error: error.message });
+            }
+        };
+
 //////////////// READ
 
 const getAllMovies = async (req, res) => {
@@ -48,6 +60,8 @@ const getAllRoles = async (req, res) => {
         return res.status(500).send(error.message);
         }
     }; 
+
+
 
 const getMoviesById = async (req, res) => {
     try {
@@ -74,6 +88,19 @@ const getMoviesById = async (req, res) => {
             return res.status(500).send(error.message);
         }
         };
+
+        const getActorsByRolesId = async (req, res) => {
+            try {
+                const { id } = req.params;
+                const este = await Actor.find({role: id});
+                if (este) {
+                return res.status(200).json({ este });
+                }
+                return res.status(404).send('This ID is not real');
+            } catch (error) {
+                return res.status(500).send(error.message);
+            }
+            };
 
 /////////////// UPDATE
 
@@ -118,6 +145,8 @@ module.exports = {
     deleteMovie,
     createRole,
     getAllRoles,
-    getRoleByMoviesId
+    getRoleByMoviesId,
+    createActor,
+    getActorsByRolesId
 
 } 

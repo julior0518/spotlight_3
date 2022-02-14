@@ -14,4 +14,10 @@ router.post('/roles', controllers.createRole);
 router.get('/roles', controllers.getAllRoles);
 router.get('/roles/:id', controllers.getRoleByMoviesId);
 
+router.post('/actors', controllers.createActor);
+router.get('/actors/:id', controllers.getActorsByRolesId);
+
+
+
+
 module.exports = router
