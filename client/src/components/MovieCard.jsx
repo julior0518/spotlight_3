@@ -14,6 +14,10 @@ function MoviesCard({movies}) {
 
     let arr = movies.todosLosMovies
 
+   
+console.log(arr.length)
+
+
     function next(){
         (current < arr.length - 1  ? setCurrent(current + 1) : setCurrent(0))
     }
