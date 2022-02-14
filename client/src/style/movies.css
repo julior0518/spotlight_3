@@ -31,11 +31,8 @@
 
 .addButton{
     width: 80%;
-    opacity: 40%;
-    background-color: rgb(184, 184, 184);
-    padding: 10px;
-    border-radius: 25px;
-    text-align: center;
+    opacity: 40%
+
 }
 .addButton:hover {
     opacity: 100%
