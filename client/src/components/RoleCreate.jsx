@@ -37,7 +37,6 @@ console.log(form)
                         className='inputFormR'
                         
                     ></input>
-               
                 <input 
                     onChange={handleChange}  
                     placeholder="Description" 
@@ -45,7 +44,7 @@ console.log(form)
                     type="text" 
                     className='inputFormR'
                 ></input>
-                 <div className="formRow">
+                <div className="formRow">
                     <input 
                         onChange={handleChange}  
                         placeholder="age" 
@@ -69,9 +68,10 @@ console.log(form)
                     type="text" 
                     className='inputFormR'
                 ></input>
-            
-                <button className='buttonFormR' onClick={handleSubmit}>Submit</button>
-                <p className='buttonCancel' onClick={() => {setShow(!show)}}>Cancel</p>
+                <div className='formRow'>
+                    <button className='buttonFormR' onClick={handleSubmit}>Submit</button>
+                    <button className='buttonFormR' onClick={() => {setShow(!show)}}>Cancel</button>
+                </div>
 
             </form>
         </div>

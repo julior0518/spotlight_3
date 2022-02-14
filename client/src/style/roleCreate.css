@@ -28,13 +28,16 @@
     margin-top: 15%;
 }
 .buttonFormR {
-    width: 200px;
+    width: 300px;
     height: 40px;
     border-radius: 5px;
     border: none;
     margin-top: 50px;
     margin-left: 10px;
     align-self: center;
+}
+.buttonFormR:hover {
+    opacity: 60%;
 }
 
 @keyframes fadeIn {
