@@ -19,7 +19,7 @@ function Actor({movie,role}) {
     return (
         <div className= "Actor">
             <div id={show ? "addActorForm" : null} className='addActor' onClick={()=>{setShow(true)}} >
-                {show ? <ActorCreate movieID={movie} roleID={role}/> : <h3 className="addActorB" src={addButton}>apply</h3>}
+                {show ? <ActorCreate movieID={movie} roleID={role} show={show} setShow={setShow}/> : <h3 className="addActorB" src={addButton}>apply</h3>}
             </div>
             <div className='actorCard'>
                 
