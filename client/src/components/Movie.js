@@ -28,7 +28,9 @@ function Movies(props) {
     return (
         <div className="Movies">
             <div onClick={handleClick} className='addMovie'  id={animate ? "wow" : null}>
-            {movieCreate ? <MovieCreate animate={animate} setAnimate={setAnimate}/> : <img className="addButton" src={addButton}></img>}
+            {movieCreate ? <MovieCreate animate={animate} setAnimate={setAnimate}/> : <h4 className="addButton"> + </h4>}
+            
+            
             </div>
             {movies ? <MoviesCard movies={movies}/> : null}
         </div>

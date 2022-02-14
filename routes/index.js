@@ -2,7 +2,7 @@ const { Router } = require('express')
 const router = Router();
 const controllers = require('../controllers');
 
-router.get('/', (req, res) => res.render('movies'));
+router.get('/', (req, res) => res.send('This is groot!'));
 
 router.post('/movies', controllers.createMovie);
 router.get('/movies', controllers.getAllMovies);

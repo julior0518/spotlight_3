@@ -1,5 +1,8 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../style/movieCard.css'
+import { BASE_URL } from '../globals'
+
 
 
 
@@ -22,6 +25,10 @@ function MoviesCard({movies}) {
         setShow(!show)
     }
     let movie = movies.todosLosMovies[current]
+    function deleteMovie(){
+        axios.delete(`${BASE_URL}/movies/${movie._id}`)
+        document.location.reload()
+    }
     return (
         <div className="MoviesCard">
             <img className="MoviesCardImage" src={movie.image}/>
@@ -29,7 +36,11 @@ function MoviesCard({movies}) {
             <div className="previous" onClick={previous}></div>
                 {show ? null :
                     <div className= "MoviesCardInfo" >
-                        <h1 id="indent" className='MoviesCardTitle'>{movie.name}</h1>
+                        <div className='formRow2'>
+                            <h1 id="indent" className='MoviesCardTitle'>{movie.name}</h1>
+                            <h4 className="deleteButton" onClick={deleteMovie}> X </h4>
+
+                        </div>
                         <p id="indent">{movie.description}</p>
                     </div>
                 }
