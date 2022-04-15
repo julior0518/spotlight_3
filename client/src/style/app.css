@@ -22,8 +22,3 @@
     grid-template-columns: 0vw 85vw;
     justify-content: center
 ;}
-
-textarea:focus, input:focus {
-    color: #d4d4d4;
-}
-
