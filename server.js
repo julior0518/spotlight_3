@@ -20,7 +20,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error 1:'));
 
 
 if(process.env.NODE_ENV === 'production'){    
-    app.use(express.static('client/build'))  
+    app.use(express.static('client/build'))  // set static folder 
+    //returning frontend for any route other than api 
     app.get('*',(req,res)=>{     
         res.sendFile (path.resolve(__dirname,'frontend','build','index.html' ));    
     });
